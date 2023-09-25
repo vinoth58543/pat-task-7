@@ -1,0 +1,16 @@
+def create_timestamp_file():
+    # Generate the current timestamp
+    current_time = datetime.datetime.now()
+    
+    # Format the timestamp as a string
+    timestamp_str = current_time.strftime("%Y-%m-%d_%H-%M-%S")
+    
+    # Create a text file with the timestamp as the filename
+    filename = f"{timestamp_str}.txt"
+    
+    # Write the timestamp to the file
+    with open(filename, "w") as file:
+        file.write(timestamp_str)
+
+# Call the function to create the file
+create_timestamp_file()
